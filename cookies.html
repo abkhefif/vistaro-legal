@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique Cookies — Vistaro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back">← Retour</a>
+    <h1>Politique Cookies et Stockage Local</h1>
+    <p class="date">Derniere mise a jour : 16 avril 2026</p>
+
+    <h2>1. Qu'est-ce qu'un cookie ?</h2>
+    <p>Un cookie est un petit fichier texte depose sur votre appareil par un site ou une application web, utilise pour memoriser des informations entre les sessions. Dans le contexte des applications mobiles natives, des mecanismes equivalents de stockage local peuvent etre employes.</p>
+
+    <h2>2. Cookies utilises par Vistaro</h2>
+    <h3>Sur mobile (iOS et Android)</h3>
+    <p>Vistaro <strong>n'utilise aucun cookie</strong> sur mobile.</p>
+    <p>Le token de session d'authentification (JWT) est stocke de maniere securisee via :</p>
+    <ul>
+      <li><strong>iOS</strong> : le Keychain systeme (chiffrement materiel Apple).</li>
+      <li><strong>Android</strong> : le Keystore systeme (enclave securisee Android).</li>
+    </ul>
+    <p>Ces mecanismes sont distincts des cookies et ne sont pas accessibles par des tiers ni par d'autres applications. Aucune donnee n'est ecrite dans un navigateur web.</p>
+
+    <h3>Sur web (version navigateur)</h3>
+    <p>Si vous accedez a Vistaro depuis un navigateur web, un unique <strong>sessionStorage</strong> est utilise pour conserver votre token de session d'authentification le temps de votre visite.</p>
+    <table>
+      <tr><th>Cle</th><th>Finalite</th><th>Type</th><th>Duree</th></tr>
+      <tr><td>Token de session (JWT)</td><td>Maintien de la session authentifiee</td><td>sessionStorage</td><td>Duree de la session navigateur (efface a la fermeture de l'onglet)</td></tr>
+    </table>
+    <ul>
+      <li>Aucun cookie HTTP n'est depose par l'application.</li>
+      <li>Le sessionStorage n'est <strong>pas</strong> persistant : il est automatiquement supprime a la fermeture de l'onglet ou du navigateur.</li>
+      <li>Le localStorage (persistant) <strong>n'est pas utilise</strong> pour les donnees de session.</li>
+    </ul>
+
+    <h2>3. Stockage local (hors cookies)</h2>
+    <p>L'application utilise <strong>AsyncStorage</strong> pour conserver des preferences d'interface utilisateur sur votre appareil. Ces donnees ne sont pas sensibles et ne sont jamais transmises a nos serveurs.</p>
+    <table>
+      <tr><th>Cle</th><th>Finalite</th><th>Donnees stockees</th></tr>
+      <tr><td>Theme de l'interface</td><td>Memoriser votre choix clair/sombre</td><td>Valeur texte (ex. : "dark")</td></tr>
+      <tr><td>Statut de l'onboarding</td><td>Eviter de reafficher l'ecran de bienvenue</td><td>Booleen</td></tr>
+      <tr><td>Categorie active</td><td>Restaurer votre derniere selection</td><td>Valeur texte (ex. : "nature")</td></tr>
+    </table>
+    <p>Ces preferences restent sur votre appareil, sont modifiables a tout moment depuis les reglages de l'application, et sont supprimees si vous desinstallez l'application.</p>
+
+    <h2>4. Cookies tiers</h2>
+    <p>Vistaro <strong>n'integre aucun cookie tiers</strong> :</p>
+    <ul>
+      <li>Aucun outil d'analyse ou de mesure d'audience (pas de Google Analytics, Mixpanel, Firebase Analytics, etc.).</li>
+      <li>Aucun reseau publicitaire.</li>
+      <li>Aucun pixel de suivi.</li>
+      <li>Aucun bouton de partage vers des reseaux sociaux integrant un traceur.</li>
+    </ul>
+    <p>La connexion Google (OAuth) est optionnelle et n'entraine pas de depot de cookie publicitaire ou de suivi au sein de l'application.</p>
+
+    <h2>5. Vos droits</h2>
+    <p>Conformement au Reglement General sur la Protection des Donnees (RGPD) et a la directive ePrivacy, vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Droit d'acces</strong> : savoir quelles donnees locales sont stockees sur votre appareil.</li>
+      <li><strong>Droit de suppression</strong> : supprimer les donnees locales en desinstallant l'application ou en effacant les donnees de l'application depuis les reglages de votre appareil.</li>
+      <li><strong>Droit d'opposition</strong> : l'application ne deposant aucun cookie de suivi ou publicitaire, aucun consentement specifique n'est requis.</li>
+    </ul>
+    <p>Pour toute question relative au stockage de vos donnees, vous pouvez egalement introduire une reclamation aupres de la <a href="https://www.cnil.fr" target="_blank">CNIL</a>.</p>
+
+    <h2>6. Contact</h2>
+    <p>Pour toute question concernant cette politique :</p>
+    <ul>
+      <li>Email : <a href="mailto:contact@vistaro.fr">contact@vistaro.fr</a></li>
+      <li>Adresse : Perpignan, France</li>
+    </ul>
+
+    <div class="footer">
+      <p>Vistaro — Perpignan, France</p>
+    </div>
+  </div>
+</body>
+</html>
